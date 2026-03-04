@@ -5,7 +5,7 @@ python-multipart==0.0.12
 
 # LangChain (v1.x stable)
 langchain==1.2.0
-langchain-community==0.3.7
+langchain-community==0.4.1
 langchain-openai==0.3.0
 
 # LangGraph v1.x (NEW)
