@@ -1,45 +1,45 @@
 # API
-fastapi==0.115.0
-uvicorn[standard]==0.30.6
-python-multipart==0.0.12
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.12
 
-# LangChain (v1.x stable)
-langchain==1.2.0
-langchain-community==0.4.1
-langchain-openai==0.3.0
+# LangChain ecosystem
+# Pin major versions only — let pip resolve compatible sub-dependencies.
+# DO NOT hard-pin patch versions across this ecosystem; they have cascading
+# interdependencies (pydantic-settings, langchain-core, etc.) that pip must solve.
+langchain>=1.2.0,<2.0.0
+langchain-community>=0.4.0,<1.0.0
+langchain-openai>=0.3.0,<1.0.0
 
-# LangGraph v1.x (NEW)
-# Core graph framework
-langgraph==1.0.7
-# Base checkpoint interface (includes MemorySaver)
-langgraph-checkpoint==2.0.10
-# SQLite checkpointer — now a separate package since v0.2
-langgraph-checkpoint-sqlite==2.0.5
-# Prebuilt helpers (ToolNode, create_react_agent etc.)
-langgraph-prebuilt==1.0.8
+# LangGraph v1.x
+# Pin major version only for same reason.
+langgraph>=1.0.0,<2.0.0
+langgraph-checkpoint>=2.0.0,<3.0.0
+langgraph-checkpoint-sqlite>=2.0.0,<3.0.0
+langgraph-prebuilt>=1.0.0,<2.0.0
 
 # Embeddings
-sentence-transformers==3.3.1
+sentence-transformers>=3.3.0,<4.0.0
 
 # Vector Store
-qdrant-client==1.12.0
+qdrant-client>=1.12.0,<2.0.0
 
 # PDF Parsing
-pymupdf==1.24.13
+pymupdf>=1.24.0,<2.0.0
 
-# Config & Validation
-pydantic==2.10.0
-pydantic-settings==2.6.1
+# Config & Validation — let pip pick compatible version
+pydantic>=2.0.0,<3.0.0
+pydantic-settings>=2.0.0,<3.0.0
 
 # Utils
-python-dotenv==1.0.1
-httpx==0.27.2
+python-dotenv>=1.0.0
+httpx>=0.27.0,<1.0.0
 
 # RLM — Sandboxed REPL
-RestrictedPython==7.4
+RestrictedPython>=7.0.0
 
-# Async SQLite (needed by AsyncSqliteSaver)
-aiosqlite==0.20.0
+# Async SQLite
+aiosqlite>=0.20.0
 
 # Observability (Optional)
 # langsmith
